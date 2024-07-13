@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
+
+body {
+  font-family: "Vazirmatn", "sans-serif";
+  margin: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 52px;
+  column-gap: 12px;
+  padding: 36px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer {
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-row: 3;
+  grid-column: 1 / -1;
+  background-color: #003700;
+  color: rgb(204, 204, 204);
+}
+
+.footer-social-media {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-grow: 1;
+}
+a:visited {
+  color: rgb(204, 204, 204);
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 345px;
+}
+
+.form-component {
+  z-index: 2000;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure form is visible even on smaller screens */
+  /* background-color: #f5f5f5; Light background color */
+  z-index: 2000;
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff; /* White background for the form itself */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 400px; /* Adjust width as needed */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box; /* Ensures content fits within the padding */
+}
+
+textarea {
+  min-height: 100px; /* Set minimum height for a better user experience */
+}
+
+.submit-button {
+  background-color: #4caf50; /* Green color for submit button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Indicate clickable button */
+  transition: 0.3s ease-in-out; /* Add a smooth hover effect */
+}
+
+.submit-button:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
+.form-overlay {
+  position: fixed; /* Ensures overlay covers the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Covers the entire viewport height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+  display: flex; /* Center the form horizontally and vertically */
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.form-container.show {
+  /* Add this class when the form is visible */
+  display: block; /* Show the form */
+}
